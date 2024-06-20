@@ -1,4 +1,4 @@
-import { expect, it } from "vitest";
+import {describe, expect, it} from "vitest";
 import { fizzbuzz } from "./fizzbuzz";
 
 // fizzbuzz(1) => 1
@@ -14,6 +14,13 @@ import { fizzbuzz } from "./fizzbuzz";
 // if multiple de 5 print buzz
 // if multiple de 3 and 5 print fizzbuzz
 
-it("fizzbuzz(1) should return 1", () => {
-  expect(fizzbuzz(1)).toBe(1);
-});
+describe("fizzbuzz", () => {
+
+  it("fizzbuzz(1) should return an array with 1", () => {
+    expect(fizzbuzz(1)).toEqual([1]);
+  });
+
+  it("fizzbuzz(2) should return an array with 1,2", () => {
+    expect(fizzbuzz(2)).toEqual([1, 2]);
+  });
+})
