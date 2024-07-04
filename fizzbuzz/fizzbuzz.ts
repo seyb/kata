@@ -1,5 +1,7 @@
 export function fizzbuzz(number: number) {
-  if (number===1) return [1]
-  if (number===2) return [1,2]
-  if (number===3) return [1,2,'fizz']
+  const fizzBuzz = [];
+  for (let i = 1; i <= number; i++) {
+    fizzBuzz.push(i % 3 ? i : "fizz");
+  }
+  return fizzBuzz;
 }
