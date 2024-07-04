@@ -27,4 +27,13 @@ describe("fizzbuzz", () => {
   it("fizzbuzz(3) should return an array with 1,2,fizz", () => {
     expect(fizzbuzz(3)).toEqual([1, 2, 'fizz']);
   });
+
+  it("fizzbuzz(4) should return an array with 1,2,fizz, 4", () => {
+    expect(fizzbuzz(4)).toEqual([1, 2, 'fizz', 4]);
+  });
+
+  it("fizzbuzz(5) should return an array with 1,2,fizz,4,buzz", () => {
+    expect(fizzbuzz(5)).toEqual([1, 2, 'fizz', 4, 'buzz']);
+  });
+
 })
