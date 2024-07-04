@@ -1,13 +1,6 @@
-import {describe, expect, it} from "vitest";
+import { describe, expect, it } from "vitest";
 import { fizzbuzz } from "./fizzbuzz";
 
-// fizzbuzz(1) => 1
-// fizzbuzz(2) => 1, 2
-// fizzbuzz(3) => 1, 2, fizz
-// fizzbuzz(4) => 1, 2, fizz, 4
-// fizzbuzz(5) => 1, 2, fizz, 4, buzz
-// fizzbuzz(6) => 1, 2, fizz, 4, buzz, fizz
-// fizzbuzz(9) => 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz
 // fizzbuzz(15) => 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz
 
 // if multiple de 3 print fizz
@@ -15,7 +8,6 @@ import { fizzbuzz } from "./fizzbuzz";
 // if multiple de 3 and 5 print fizzbuzz
 
 describe("fizzbuzz", () => {
-
   it("fizzbuzz(1) should return an array with 1", () => {
     expect(fizzbuzz(1)).toEqual([1]);
   });
@@ -25,15 +17,52 @@ describe("fizzbuzz", () => {
   });
 
   it("fizzbuzz(3) should return an array with 1,2,fizz", () => {
-    expect(fizzbuzz(3)).toEqual([1, 2, 'fizz']);
+    expect(fizzbuzz(3)).toEqual([1, 2, "fizz"]);
   });
 
   it("fizzbuzz(4) should return an array with 1,2,fizz, 4", () => {
-    expect(fizzbuzz(4)).toEqual([1, 2, 'fizz', 4]);
+    expect(fizzbuzz(4)).toEqual([1, 2, "fizz", 4]);
   });
 
   it("fizzbuzz(5) should return an array with 1,2,fizz,4,buzz", () => {
-    expect(fizzbuzz(5)).toEqual([1, 2, 'fizz', 4, 'buzz']);
+    expect(fizzbuzz(5)).toEqual([1, 2, "fizz", 4, "buzz"]);
   });
 
-})
+  it("fizzbuzz(6) should return an array with 1,2,fizz,4,buzz,fizz", () => {
+    expect(fizzbuzz(6)).toEqual([1, 2, "fizz", 4, "buzz", "fizz"]);
+  });
+
+  it("fizzbuzz(9) should return an array with 1,2,fizz,4,buzz,fizz, 7,8,fizz", () => {
+    expect(fizzbuzz(9)).toEqual([
+      1,
+      2,
+      "fizz",
+      4,
+      "buzz",
+      "fizz",
+      7,
+      8,
+      "fizz",
+    ]);
+  });
+
+  it("fizzbuzz(15) should return an array with 1,2,fizz,4,buzz,fizz, 7,8,fizz, buzz, 11, fizz, 13, 14, fizzbuzz", () => {
+    expect(fizzbuzz(15)).toEqual([
+      1,
+      2,
+      "fizz",
+      4,
+      "buzz",
+      "fizz",
+      7,
+      8,
+      "fizz",
+      "buzz",
+      11,
+      "fizz",
+      13,
+      14,
+      "fizzbuzz",
+    ]);
+  });
+});
