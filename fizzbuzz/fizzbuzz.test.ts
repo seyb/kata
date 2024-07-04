@@ -23,4 +23,8 @@ describe("fizzbuzz", () => {
   it("fizzbuzz(2) should return an array with 1,2", () => {
     expect(fizzbuzz(2)).toEqual([1, 2]);
   });
+
+  it("fizzbuzz(3) should return an array with 1,2,fizz", () => {
+    expect(fizzbuzz(3)).toEqual([1, 2, 'fizz']);
+  });
 })
